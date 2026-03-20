@@ -2,6 +2,8 @@
 
 Show a live preview of alias expansion in the Zsh message area while typing.
 
+[Demo GIF](./demo.gif)
+
 This plugin is useful when you use short aliases (for example, `gco`, `dcu`) and want a quick reminder of what they expand to before pressing Enter.
 
 ## Features
