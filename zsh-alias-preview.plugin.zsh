@@ -7,6 +7,14 @@ typeset -ga ALIAS_PREVIEW_COMMANDS=(git docker)
 typeset -g _alias_preview_last=""
 
 function _preview_alias_message() {
+    # Don't overwrite the completion menu
+    case "$LASTWIDGET" in
+        *complete*|list-choices|_complete_help)
+            _alias_preview_last=""
+            return
+            ;;
+    esac
+
     local trimmed="${BUFFER#"${BUFFER%%[! ]*}"}"
     local first_word="${trimmed%% *}"
 
